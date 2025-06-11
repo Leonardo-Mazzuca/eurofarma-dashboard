@@ -6,7 +6,7 @@ import HomeRight from "@/components/home/right"
 
 const Home = () => {
   return (
-    <section className="">
+    <section className="flex-1 flex">
  
         <HomeLeft />
 
