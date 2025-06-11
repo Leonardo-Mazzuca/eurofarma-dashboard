@@ -1,11 +1,11 @@
 
 
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import { Route, Routes} from 'react-router-dom'
 import {Home,Traces,Config,AiChat,Data,FeatureToggle} from '@/pages'
 
 const AppRoutes = () => {
   return (
-    <BrowserRouter>
+
         <Routes>
             <Route index element={<Home />} />
             <Route path='/traces' element={<Traces />} />
@@ -14,7 +14,6 @@ const AppRoutes = () => {
             <Route path='/data' element={<Data />} />
             <Route path='/ai-chat' element={<AiChat />} />
         </Routes>
-    </BrowserRouter>
   )
 }
 

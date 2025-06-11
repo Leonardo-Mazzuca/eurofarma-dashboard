@@ -1,10 +1,18 @@
+import HomeLeft from "@/components/home/left"
+import HomeRight from "@/components/home/right"
 
 
 
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <section className="">
+ 
+        <HomeLeft />
+
+        <HomeRight />
+
+    </section>
   )
 }
 
