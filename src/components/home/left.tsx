@@ -49,7 +49,7 @@ const HomeLeft = () => {
   ];
 
   return (
-    <div className="bg-neutral-100 py-8 px-6 h-screen w-[400px]">
+    <div className="bg-neutral-100 py-8 px-6 h-screen w-[500px]">
       <HomeHeader />
 
       <div className="mt-10 flex flex-col gap-5">
