@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Leonardo Mazzuca",
+      "email": "leonardo@example.com",
+      "phone_number": "+55 11 91234-5678",
+      "status": "online",
+      "time": "2025-06-12T08:30:00",
+      "points": 150,
+      "image": "github.com/Leonardo-Mazzuca.png"
+    },
+    {
+      "id": 2,
+      "fullName": "Maria Oliveira",
+      "email": "maria.oliveira@example.com",
+      "phone_number": "+55 21 99876-5432",
+      "status": "offline",
+      "time": "2025-06-12T07:45:00",
+      "points": 230,
+      "image": "github.com/Leonardo-Mazzuca.png"
+    },
+    {
+      "id": 3,
+      "fullName": "João Silva",
+      "email": "joao.silva@example.com",
+      "phone_number": "+55 31 98765-4321",
+      "status": "online",
+      "time": "2025-06-12T09:15:00",
+      "points": 120,
+      "image": "github.com/Leonardo-Mazzuca.png"
+    },
+    {
+      "id": 4,
+      "fullName": "Ana Souza",
+      "email": "ana.souza@example.com",
+      "phone_number": "+55 41 97654-3210",
+      "status": "offline",
+      "time": "2025-06-11T22:00:00",
+      "points": 305,
+      "image": "github.com/Leonardo-Mazzuca.png"
+    },
+    {
+      "id": 5,
+      "fullName": "Carlos Mendes",
+      "email": "carlos.mendes@example.com",
+      "phone_number": "+55 61 96543-2109",
+      "status": "online",
+      "time": "2025-06-12T10:05:00",
+      "points": 178,
+      "image": "github.com/Leonardo-Mazzuca.png"
+    }
+  ]
+}

@@ -6,7 +6,6 @@ import { ChevronDownIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Calendar } from "@/components/ui/calendar"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import {
   Popover,
   PopoverContent,
@@ -20,17 +19,14 @@ export function DatePicker() {
   return (
     <div className="flex gap-4">
       <div className="flex flex-col gap-3">
-        <Label htmlFor="date" className="px-1">
-          Data
-        </Label>
         <Popover open={open} onOpenChange={setOpen}>
           <PopoverTrigger asChild>
             <Button
               variant="outline"
               id="date"
-              className="w-32 justify-between font-normal"
+              className="h-[40px] justify-between font-normal"
             >
-              {date ? date.toLocaleDateString() : "Select date"}
+              {date ? date.toLocaleDateString() : "Selecionar data"}
               <ChevronDownIcon />
             </Button>
           </PopoverTrigger>
@@ -48,15 +44,12 @@ export function DatePicker() {
         </Popover>
       </div>
       <div className="flex flex-col gap-3">
-        <Label htmlFor="time" className="px-1">
-          Hora
-        </Label>
         <Input
           type="time"
           id="time"
           step="1"
           defaultValue="10:30:00"
-          className="bg-background appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none"
+          className="bg-background h-[40px] appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none"
         />
       </div>
     </div>

@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button"
 import { Bell } from "lucide-react"
 import SearchInput from "@/components/ui/search-input"
 import UserButton from "@/components/ui/user-button"
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { DatePicker } from "../ui/date-picker"
+import DateFilter from "./data-filter"
+import ColaboratorsTable from "./colaborators-table"
 
 const HomeRightHeader = () => {
   return (
@@ -24,19 +24,8 @@ const HomeRight = () => {
   return (
     <div className="w-full flex-col px-8 p-3 gap-3">
       <HomeRightHeader />
-      <Card variant="shadow">
-        <CardHeader>
-          <h2 className="text-xl font-semibold">
-            Filtro
-          </h2>
-        </CardHeader>
-        <CardContent className="flex items-center gap-3">
-            <DatePicker />
-            <Button className="text-white mt-7 bg-blue-500">
-              Verificar
-            </Button>
-        </CardContent>
-      </Card>
+      <DateFilter />
+      <ColaboratorsTable />
     </div>
   )
 }
