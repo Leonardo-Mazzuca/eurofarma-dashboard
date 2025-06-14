@@ -98,7 +98,9 @@ const ColaboratorsTable = () => {
     columns: columns,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
-    getFilteredRowModel: getFilteredRowModel()
+    getFilteredRowModel: getFilteredRowModel(),
+    enableColumnResizing: true,
+    columnResizeMode: 'onChange',
   });
 
   const onSearch = (event: ChangeEvent<HTMLInputElement>) => {

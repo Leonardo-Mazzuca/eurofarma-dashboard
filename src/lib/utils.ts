@@ -19,3 +19,22 @@ export const homeFilterItems = [
     value: "offline"
   }
 ]
+
+export const homeLineChartFilter = [
+  {
+    value: "now",
+    label: "Hoje"
+  },
+  {
+    value: "last-10-days",
+    label: "Ultimos 10 dias"
+  },
+  {
+    value: "last-15-days",
+    label: "Ultimos 15 dias"
+  },
+  {
+    value: "last-30-days",
+    label: "Ultimos 30 dias"
+  },
+]

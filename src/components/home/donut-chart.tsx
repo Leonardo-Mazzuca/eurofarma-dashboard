@@ -2,7 +2,7 @@ import CardItemContainer from "../ui/card-item-container";
 import TableBadge from "@/components/ui/table-badge";
 import { Colors } from "@/utils/colors";
 import { ArrowDown, ArrowUp } from "lucide-react";
-import { PieChart, Pie, Cell } from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
 const DonutChart = () => {
   const data = [
@@ -24,22 +24,22 @@ const DonutChart = () => {
       }
       contentClasses="flex flex-col justify-center"
     >
-      <PieChart width={180} height={180}>
-        <Pie
-          data={data}
-          cx={90}
-          cy={90}
-          innerRadius={50}
-          outerRadius={70}
-          fill="#8884d8"
-          paddingAngle={5}
-          dataKey="value"
-        >
-          {data.map((item, index) => (
-            <Cell key={`cell-${index}`} fill={item.color} />
-          ))}
-        </Pie>
-      </PieChart>
+      <ResponsiveContainer width="100%" height={160}>
+        <PieChart height={160}>
+          <Pie
+            data={data}
+            innerRadius={50}
+            outerRadius={70}
+            fill="#8884d8"
+            paddingAngle={5}
+            dataKey="value"
+          >
+            {data.map((item, index) => (
+              <Cell key={`cell-${index}`} fill={item.color} />
+            ))}
+          </Pie>
+        </PieChart>
+      </ResponsiveContainer>
       <div className="flex flex-col w-full gap-2">
         {data.map((item, index) => (
           <div key={index} className="flex w-full justify-between gap-2">
