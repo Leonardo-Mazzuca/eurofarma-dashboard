@@ -3,14 +3,16 @@
 
 import React from 'react'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import { cn } from '@/lib/utils'
 
 type Props = {
     title: string,
     children: React.ReactNode
     className?:string
+    contentClasses?:string
 }
 
-const CardItemContainer = ({children,title,className}: Props) => {
+const CardItemContainer = ({children,title,className,contentClasses}: Props) => {
   return (
     <Card className={className} variant="shadow">
     <CardHeader>
@@ -18,7 +20,7 @@ const CardItemContainer = ({children,title,className}: Props) => {
         {title}
       </h2>
     </CardHeader>
-    <CardContent className="flex items-center gap-3">
+    <CardContent className={cn("flex items-center gap-3",contentClasses)}>
         {children}
     </CardContent>
   </Card>

@@ -1,7 +1,5 @@
 
-
 declare global {
-
     type User = {
         id: number,
         fullName: string,
@@ -12,7 +10,6 @@ declare global {
         points: number,
         image: string
     }
-
 }
 
 export {}
