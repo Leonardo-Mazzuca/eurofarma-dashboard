@@ -9,7 +9,6 @@ import {
   type ColumnDef,
 } from "@tanstack/react-table";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getUserInicials } from "@/utils/helpers";
 import dayjs from "dayjs";
@@ -21,7 +20,8 @@ import { useEffect, useState, type ChangeEvent } from "react";
 
 import HideColumnsDropDown from "@/components/home/hide-columns-dropdown";
 import FilterColumnsDropDown from "@/components/home/filter-columns-dropdown";
-import SorterButton from "../ui/sorter-button";
+import SorterButton from "@/components/ui/sorter-button";
+import TableBadge from "@/components/ui/table-badge";
 
 const ColaboratorsTable = () => {
   const { colaborators, isLoading } = useColaborators();
@@ -46,9 +46,9 @@ const ColaboratorsTable = () => {
       accessorKey: "points",
       header: ({ column }) => <SorterButton column={column} title="Pontos" />,
       cell: ({ row }) => (
-        <Badge className="bg-zinc-200/50 w-full text-zinc-700 rounded-sm">
+        <TableBadge className="md:w-[150px]">
           {row.original.points}
-        </Badge>
+        </TableBadge>
       ),
     },
     {

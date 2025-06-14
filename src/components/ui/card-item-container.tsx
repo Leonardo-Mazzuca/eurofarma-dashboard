@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 
 type Props = {
-    title: string,
+    title: React.ReactNode,
     children: React.ReactNode
     className?:string
     contentClasses?:string

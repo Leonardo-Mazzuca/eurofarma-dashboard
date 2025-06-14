@@ -9,6 +9,8 @@ export const Colors = {
        primaryBlue: "#006AFF"
     },
     default: {
-        primaryBlue: "#006AFF"
+        blue: "#006AFF",
+        red: "#FF2727",
+        green: "#52C93F"
     }
 }
