@@ -10,6 +10,15 @@ declare global {
         points: number,
         image: string
     }
+
+    type Trace = {
+        id: number,
+        endpoint: string,
+        time: string,
+        resultStatus: number,
+        enviroment: string
+        username: string
+    }
 }
 
 export {}

@@ -9,6 +9,7 @@ const SorterButton = <TData,>({ title, column }: { title: string, column: Column
       variant="ghost"
       onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
       size={"sm"}
+      className="px-0"
     >
       {title}
       <ArrowUpDown size={14} />

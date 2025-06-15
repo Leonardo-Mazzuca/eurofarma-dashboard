@@ -30,5 +30,87 @@
       "points": 120,
       "image": "github.com/Leonardo-Mazzuca.png"
     }
+  ],
+  "traces": [
+    {
+      "id": 1,
+      "endpoint": "/api/users",
+      "time": "2025-06-15T14:23:10Z",
+      "resultStatus": 200,
+      "enviroment": "PROD",
+      "username": "jdoe"
+    },
+    {
+      "id": 2,
+      "endpoint": "/api/login",
+      "time": "2025-06-15T14:24:01Z",
+      "resultStatus": 401,
+      "enviroment": "PROD",
+      "username": "asmith"
+    },
+    {
+      "id": 3,
+      "endpoint": "/api/products",
+      "time": "2025-06-15T14:25:45Z",
+      "resultStatus": 200,
+      "enviroment": "STG",
+      "username": "mjohnson"
+    },
+    {
+      "id": 4,
+      "endpoint": "/api/orders",
+      "time": "2025-06-15T14:26:30Z",
+      "resultStatus": 500,
+      "enviroment": "STG",
+      "username": "klee"
+    },
+    {
+      "id": 5,
+      "endpoint": "/api/logout",
+      "time": "2025-06-15T14:27:15Z",
+      "resultStatus": 204,
+      "enviroment": "PROD",
+      "username": "lmartins"
+    },
+    {
+      "id": 6,
+      "endpoint": "/api/users/123",
+      "time": "2025-06-15T14:28:50Z",
+      "resultStatus": 404,
+      "enviroment": "DEV",
+      "username": "dcarvalho"
+    },
+    {
+      "id": 7,
+      "endpoint": "/api/invoices",
+      "time": "2025-06-15T14:29:37Z",
+      "resultStatus": 200,
+      "enviroment": "DEV",
+      "username": "carla.santos"
+    },
+    {
+      "id": 8,
+      "endpoint": "/api/dashboard",
+      "time": "2025-06-15T14:30:25Z",
+      "resultStatus": 200,
+      "enviroment": "PROD",
+      "username": "ricardo.p"
+    },
+    {
+      "id": 9,
+      "endpoint": "/api/settings",
+      "time": "2025-06-15T14:31:10Z",
+      "resultStatus": 403,
+      "enviroment": "STG",
+      "username": "amendes"
+    },
+    {
+      "id": 10,
+      "endpoint": "/api/reports",
+      "time": "2025-06-15T14:32:03Z",
+      "resultStatus": 200,
+      "enviroment": "PROD",
+      "username": "paula.g"
+    }
   ]
 }

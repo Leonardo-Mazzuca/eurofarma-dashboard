@@ -31,7 +31,7 @@ const TracesChart = () => {
         <div className="w-full h-[1px] bg-gray-200" />
       </div>}
     >
-      <ResponsiveContainer width="100%" height={350}>
+      <ResponsiveContainer width="100%" height={200}>
         <BarChart
           width={500}
           height={300}
@@ -67,6 +67,7 @@ const TracesChart = () => {
 
           <Bar
             radius={10}
+            barSize={15}
             dataKey="pv"
             fill="url(#colorUv)"
             background={{ fill: "#F2F7FF" }}

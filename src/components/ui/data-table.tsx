@@ -8,12 +8,25 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { cn } from "@/lib/utils";
 import { flexRender } from "@tanstack/react-table";
+
+type Props<TData, TValue> = {
+  variant?: "default" | "stripped"
+} & DataTableProps<TData, TValue>
 
 export function DataTable<TData, TValue>({
   columns,
   table,
-}: DataTableProps<TData, TValue>) {
+  variant
+}: Props<TData, TValue>) {
+
+  const renderClasses = (index:number) => {
+    if( variant === 'stripped' ) {
+      return `${index % 2 === 1 ? 'bg-white' : 'bg-gray-200'}`
+    }
+  }
+
   return (
     <ComponentTable className="w-full data-table">
       <TableHeader className="data-thead">
@@ -34,9 +47,9 @@ export function DataTable<TData, TValue>({
       </TableHeader>
       <TableBody className="data-tbody">
         {table.getRowModel().rows?.length ? (
-          table.getRowModel().rows.map((row) => (
+          table.getRowModel().rows.map((row,index) => (
             <TableRow
-              className="data-table-row"
+              className={cn("data-table-row",renderClasses(index))}
               key={row.id}
               data-state={row.getIsSelected() && "selected"}
             >
