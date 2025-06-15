@@ -2,7 +2,8 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
-function Card({ className, variant="default", ...props }: React.ComponentProps<"div"> & {variant?:"default" | "shadow"}) {
+export type CardProps = React.ComponentProps<"div"> & {variant?:"default" | "shadow"}
+function Card({ className, variant="default", ...props }: CardProps) {
 
   const classNames = {
     default: "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",

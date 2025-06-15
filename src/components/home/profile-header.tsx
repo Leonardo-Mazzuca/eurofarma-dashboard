@@ -11,7 +11,7 @@ const ProfileHeader = () => {
             <Notifications />
         </div>
         <div className="w-full">
-          <SearchInput />
+          <SearchInput wrapperClasses="md:w-[450px]" />
         </div>
       </div>
       <div className="max-lg:hidden">

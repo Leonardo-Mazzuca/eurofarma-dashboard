@@ -11,8 +11,14 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
+import { cn } from "@/lib/utils"
 
-export function DatePicker() {
+type Props = {
+  enableTime?: boolean
+  triggerClasses?:string
+}
+
+export function DatePicker({enableTime = true,triggerClasses}: Props) {
   const [open, setOpen] = React.useState(false)
   const [date, setDate] = React.useState<Date | undefined>(undefined)
   return (
@@ -23,9 +29,9 @@ export function DatePicker() {
             <Button
               variant="outline"
               id="date"
-              className="w-32 justify-between font-normal"
+              className={cn("w-42 justify-between font-normal",triggerClasses)}
             >
-              {date ? date.toLocaleDateString() : "Select date"}
+              {date ? date.toLocaleDateString() : "Selecionar data"}
               <ChevronDownIcon />
             </Button>
           </PopoverTrigger>
@@ -42,15 +48,17 @@ export function DatePicker() {
           </PopoverContent>
         </Popover>
       </div>
-      <div className="flex flex-col gap-3">
-        <Input
-          type="time"
-          id="time"
-          step="1"
-          defaultValue="10:30:00"
-          className="bg-background appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none"
-        />
-      </div>
+      {enableTime && (
+        <div className="flex flex-col gap-3">
+          <Input
+            type="time"
+            id="time"
+            step="1"
+            defaultValue="10:30:00"
+            className="bg-background appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none"
+          />
+        </div>
+      )}
     </div>
   )
 }
