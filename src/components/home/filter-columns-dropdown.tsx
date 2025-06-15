@@ -32,7 +32,7 @@ const FilterColumnsDropDown = ({data,setData}:{data:User[],setData: (users: User
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" className="ml-auto">
+        <Button variant="outline">
           Filtrar colunas
         </Button>
       </DropdownMenuTrigger>

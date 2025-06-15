@@ -14,7 +14,7 @@ const ProfileHeader = () => {
           <SearchInput />
         </div>
       </div>
-      <div className="max-md:hidden">
+      <div className="max-lg:hidden">
         <UserButton />
       </div>
     </div>

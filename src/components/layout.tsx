@@ -9,10 +9,10 @@ const Layout = ({children}:{children: React.ReactNode}) => {
         <main className="flex-1">
             <AppSidebar />
               <section>
-                <div className="md:hidden">
+                <div className="lg:hidden fixed rounded-br-2xl bg-zinc-700 p-3">
                   <SidebarTrigger />
                 </div>
-                <div className="flex-1 md:ms-[250px]">
+                <div className="flex-1 lg:ms-[250px]">
                   {children}
                 </div>
             </section>

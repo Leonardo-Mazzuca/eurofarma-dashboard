@@ -15,7 +15,6 @@ import {
 export function DatePicker() {
   const [open, setOpen] = React.useState(false)
   const [date, setDate] = React.useState<Date | undefined>(undefined)
-
   return (
     <div className="flex gap-4">
       <div className="flex flex-col gap-3">
@@ -24,9 +23,9 @@ export function DatePicker() {
             <Button
               variant="outline"
               id="date"
-              className="h-[40px] justify-between font-normal"
+              className="w-32 justify-between font-normal"
             >
-              {date ? date.toLocaleDateString() : "Selecionar data"}
+              {date ? date.toLocaleDateString() : "Select date"}
               <ChevronDownIcon />
             </Button>
           </PopoverTrigger>
@@ -49,7 +48,7 @@ export function DatePicker() {
           id="time"
           step="1"
           defaultValue="10:30:00"
-          className="bg-background h-[40px] appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none"
+          className="bg-background appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none"
         />
       </div>
     </div>

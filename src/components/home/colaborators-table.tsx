@@ -124,12 +124,12 @@ const ColaboratorsTable = () => {
       title="Ranking de colaboradores por engajamento"
       contentClasses="flex-col items-start"
     >
-      <div className="flex items-center gap-3">
+      <div className="flex max-lg:flex-col w-full md:items-center gap-3">
         <Input
           placeholder="Buscar usuários..."
           value={search}
           onChange={(e) => onSearch(e)}
-          className="w-[400px]"
+          className="md:w-[400px]"
         />
         <HideColumnsDropDown table={table}/>
         <FilterColumnsDropDown data={colaborators} setData={setColaboratorsData}/>

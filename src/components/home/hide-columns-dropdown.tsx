@@ -13,7 +13,7 @@ const HideColumnsDropDown = <TData, TValue>({table}:DataTablePropsWithoutColumns
   return (
     <DropdownMenu>
     <DropdownMenuTrigger asChild>
-      <Button variant="outline" className="ml-auto">
+      <Button variant="outline">
         Esconder coluna
       </Button>
     </DropdownMenuTrigger>

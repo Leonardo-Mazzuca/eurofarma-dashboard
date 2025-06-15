@@ -15,8 +15,8 @@ export function DataTable<TData, TValue>({
   table,
 }: DataTableProps<TData, TValue>) {
   return (
-    <ComponentTable>
-      <TableHeader>
+    <ComponentTable className="w-full data-table">
+      <TableHeader className="data-thead">
         {table.getHeaderGroups().map((headerGroup) => (
           <TableRow key={headerGroup.id}>
             {headerGroup.headers.map((header) => (
@@ -32,10 +32,11 @@ export function DataTable<TData, TValue>({
           </TableRow>
         ))}
       </TableHeader>
-      <TableBody>
+      <TableBody className="data-tbody">
         {table.getRowModel().rows?.length ? (
           table.getRowModel().rows.map((row) => (
             <TableRow
+              className="data-table-row"
               key={row.id}
               data-state={row.getIsSelected() && "selected"}
             >
@@ -55,7 +56,7 @@ export function DataTable<TData, TValue>({
             </TableRow>
           ))
         ) : (
-          <TableRow>
+          <TableRow className="data-table-row">
             <TableCell colSpan={columns.length} className="h-24 text-center">
               Sem resultados.
             </TableCell>

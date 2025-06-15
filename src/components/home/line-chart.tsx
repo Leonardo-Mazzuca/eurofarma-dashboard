@@ -66,9 +66,9 @@ const LineChart = () => {
       title={
         <div className="flex w-full items-center gap-5">
           <h2>Acessos</h2>
-          <div>
+          <div className="flex w-full pe-10 justify-between">
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-2 text-sm">
+              <DropdownMenuTrigger className="flex ps-5 items-center gap-2 text-sm">
                 <span className="text-muted-foreground">
                   {
                     homeLineChartFilter.find(
@@ -89,6 +89,17 @@ const LineChart = () => {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+
+            <div className="flex items-center gap-5">
+              <div className="flex items-center gap-2">
+                <span className="h-[10px] w-[10px] rounded-full bg-blue-500" />
+                <p className="text-gray-400 font-normal text-sm">Período atual</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="h-[10px] w-[10px] rounded-full bg-gray-400" />
+                <p className="text-gray-400 font-normal text-sm">Mesmo Período 6 mêses atrás</p>
+              </div>
+            </div>
           </div>
         </div>
       }
