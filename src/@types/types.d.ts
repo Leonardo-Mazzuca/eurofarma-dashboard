@@ -19,6 +19,15 @@ declare global {
         enviroment: string
         username: string
     }
+
+    type DataItem = {
+        id: number,
+        title: string,
+        description: string
+        chartData?: {
+            values: number[]
+        }
+    }
 }
 
 export {}

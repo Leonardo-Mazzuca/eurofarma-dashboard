@@ -112,5 +112,46 @@
       "enviroment": "PROD",
       "username": "paula.g"
     }
+  ],
+  "data-items": [
+    {
+      "id": 1,
+      "title": "Usuários Ativos",
+      "description": "270/500"
+    },
+    {
+      "id": 2,
+      "title": "Qtd de quizzes respondidos",
+      "description": "3,298"
+    },
+    {
+      "id": 3,
+      "title": "Média de sessões por usuário",
+      "description": "9m 34s"
+    },
+    {
+      "id": 4,
+      "title": "Participação em programas",
+      "description": "64%",
+      "chartData": {
+        "values": [30, 45, 50, 48, 60, 64]
+      }
+    },
+    {
+      "id": 5,
+      "title": "Engajamento",
+      "description": "86%",
+      "chartData": {
+        "values": [60, 62, 70, 74, 80, 86]
+      }
+    },
+    {
+      "id": 6,
+      "title": "Conclusão de treinamentos",
+      "description": "+34%",
+      "chartData": {
+        "values": [10, 15, 20, 25, 30, 34]
+      }
+    }
   ]
 }

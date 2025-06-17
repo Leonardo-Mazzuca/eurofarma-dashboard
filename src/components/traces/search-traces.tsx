@@ -11,11 +11,11 @@ const SearchTraces = () => {
   return (
     <div className="flex flex-col gap-2">
       <h2 className="font-semibold my-5">800 hits</h2>
-      <div className="flex w-full gap-5 items-center">
+      <div className="flex flex-wrap w-full gap-5 items-center">
       <div>
           <SearchInput
             iconPosition="start"
-            className="border w-[700px] border-gray-400 h-[45px]"
+            className="border md:w-[700px] border-gray-400 h-[45px]"
             placeholder="Procurar endpoint..."
           />
         </div>
