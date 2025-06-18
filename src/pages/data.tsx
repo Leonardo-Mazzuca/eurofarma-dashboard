@@ -11,16 +11,15 @@ import { ChevronRight, Download } from "lucide-react";
 const Data = () => {
   return (
     <section className="px-6 py-8">
-        <Header
-          title="Dados"
-          leftChildren={
-            <Button className="lg:me-[300px]" variant={"ghost"}>
-              <Download />
-              Download
-            </Button>
-          }
-        />
-   
+      <Header
+        title="Dados"
+        leftChildren={
+          <Button className="lg:me-[300px]" variant={"ghost"}>
+            <Download />
+            Download
+          </Button>
+        }
+      />
 
       <article className="w-full">
         <DataFilters />
@@ -52,7 +51,10 @@ const Data = () => {
               wrapperClasses="h-[800px]"
             />
 
-            <Button className="flex items-center text-blue-500 gap-2" variant={"ghost"}>
+            <Button
+              className="flex items-center text-blue-500 gap-2"
+              variant={"ghost"}
+            >
               Ver rank completo
               <ChevronRight />
             </Button>
