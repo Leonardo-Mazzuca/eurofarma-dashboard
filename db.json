@@ -139,7 +139,7 @@
     },
     {
       "id": 5,
-      "title": "Engajamento",
+      "title": "Engajamento de usuários",
       "description": "86%",
       "chartData": {
         "values": [60, 62, 70, 74, 80, 86]

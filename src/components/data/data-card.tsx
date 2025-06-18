@@ -107,9 +107,9 @@ const DataCard = ({
   return (
     <Card
       variant="shadow"
-      className="w-full rounded-2xl flex flex-col lg:w-[240px]"
+      className="w-full rounded-2xl flex flex-col h-[150px] xl:w-[200px] flex-1"
     >
-      <CardContent className="flex flex-col justify-between h-[100px]">
+      <CardContent className="flex flex-col justify-between h-full">
         <div>
             <p className="font-semibold text-sm text-zinc-500">{title}</p>
 
@@ -124,7 +124,7 @@ const DataCard = ({
         </div>
 
         {chartData && (
-          <div className="mt-auto">
+          <div className="mt-2">
             <MiniAreaChart values={chartData.values} />
           </div>
         )}
