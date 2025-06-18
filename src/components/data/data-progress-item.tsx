@@ -16,21 +16,23 @@ const DataProgressItem = ({ items, title }: Props) => {
     <CardItemContainer
       className="w-full"
       title={<h2 className="text-gray-500 text-sm font-medium">{title}</h2>}
+      contentClasses="w-full block"
     >
       <div className="flex flex-col gap-3">
         {items.map((item, index) => (
           <div key={index} className="flex items-center gap-6">
             <img
-              className="w-[50px] object-cover rounded-lg h-[50px]"
+              className="w-[50px] h-[50px] object-cover rounded-lg"
               alt={`Image ${index}`}
               src={item.image}
             />
-            <div className="flex-1 flex flex-col">
-              <h2 className="text-zinc-800 my-0 text-sm font-bold">
+
+            <div className="flex-1 flex flex-col ">
+              <h2 className="text-zinc-800 text-sm font-bold truncate">
                 {item.title}
               </h2>
 
-              <div className="mt-1 h-2.5 w-full rounded-full bg-gray-200 overflow-hidden">
+              <div className="mt-1 h-2.5 rounded-full bg-gray-200 overflow-hidden">
                 <div
                   className="h-full rounded-full transition-all"
                   style={{
@@ -40,7 +42,10 @@ const DataProgressItem = ({ items, title }: Props) => {
                 />
               </div>
             </div>
-            <h3 className="text-zinc-500 font-semibold">{item.progress}%</h3>
+
+            <h3 className="text-zinc-500 font-semibold whitespace-nowrap">
+              {item.progress}%
+            </h3>
           </div>
         ))}
       </div>

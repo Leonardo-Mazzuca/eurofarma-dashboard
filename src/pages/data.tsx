@@ -4,22 +4,23 @@ import DataFilters from "@/components/data/data-filter";
 import DataProgressItems from "@/components/data/data-progress-items";
 import DataRankItem from "@/components/data/data-rank-item";
 import { Button } from "@/components/ui/button";
+import Header from "@/components/ui/header";
 import rankMock from "@/utils/mock";
 import { ChevronRight, Download } from "lucide-react";
 
 const Data = () => {
   return (
     <section className="px-6 py-8">
-      <div className="flex flex-col gap-2">
-        <div className="flex justify-between  gap-2">
-          <h2 className="font-bold text-2xl">Dados</h2>
-          <Button className="lg:me-[300px]" variant={"ghost"}>
-            <Download />
-            Download
-          </Button>
-        </div>
-        <div className="w-full my-5 h-[2px] bg-gray-200" />
-      </div>
+        <Header
+          title="Dados"
+          leftChildren={
+            <Button className="lg:me-[300px]" variant={"ghost"}>
+              <Download />
+              Download
+            </Button>
+          }
+        />
+   
 
       <article className="w-full">
         <DataFilters />
@@ -32,7 +33,7 @@ const Data = () => {
             </div>
 
             <DataProgressItems />
-            <div className="flex items-center gap-6 w-full">
+            <div className="flex xl:flex-row flex-col items-center gap-6 w-full">
               <DataRankItem
                 title="% de acertos + engajamento por colaborador"
                 rankItems={rankMock}

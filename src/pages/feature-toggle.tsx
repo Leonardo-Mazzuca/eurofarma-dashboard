@@ -1,9 +1,11 @@
-
+import Header from "@/components/ui/header";
 
 const FeatureToggle = () => {
   return (
-    <div>FeatureToggle</div>
-  )
-}
+    <section className="px-6 py-8">
+      <Header title="Permissões" />
+    </section>
+  );
+};
 
-export default FeatureToggle
+export default FeatureToggle;

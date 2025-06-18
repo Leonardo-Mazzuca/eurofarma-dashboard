@@ -44,8 +44,8 @@ export function AppSidebar() {
   const navigate = useNavigate();
 
   return (
-    <Sidebar className="w-64 h-screen">
-      <SidebarContent className="bg-neutral-900 h-screen text-white">
+    <Sidebar className="w-64 h-full flex-1">
+      <SidebarContent className="bg-neutral-900 flex-1 h-full text-white">
         <SidebarGroup>
           <SidebarGroupLabel className="text-white my-10 text-lg font-semibold p-4">
        
