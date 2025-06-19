@@ -9,6 +9,12 @@ declare global {
         time: string,
         points: number,
         image: string
+        channel_id: number
+    }
+
+    type Channel = {
+        id: number,
+        name: string
     }
 
     type Trace = {

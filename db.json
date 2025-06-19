@@ -8,7 +8,8 @@
       "status": "online",
       "time": "2025-06-12T08:30:00",
       "points": 150,
-      "image": "github.com/Leonardo-Mazzuca.png"
+      "image": "github.com/Leonardo-Mazzuca.png",
+      "channel_id": 1
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@
       "status": "offline",
       "time": "2025-06-12T07:45:00",
       "points": 230,
-      "image": "github.com/Leonardo-Mazzuca.png"
+      "image": "github.com/Leonardo-Mazzuca.png",
+      "channel_id": 1
     },
     {
       "id": 3,
@@ -28,7 +30,8 @@
       "status": "online",
       "time": "2025-06-12T09:15:00",
       "points": 120,
-      "image": "github.com/Leonardo-Mazzuca.png"
+      "image": "github.com/Leonardo-Mazzuca.png",
+      "channel_id": 2
     }
   ],
   "traces": [
@@ -152,6 +155,32 @@
       "chartData": {
         "values": [10, 15, 20, 25, 30, 34]
       }
+    }
+  ],
+  "channels": [
+    {
+      "id": 1,
+      "name": "TI"
+    },
+    {
+      "id": 2,
+      "name": "Marketing"
+    },
+    {
+      "id": 3,
+      "name": "Vendas"
+    },
+    {
+      "id": 4,
+      "name": "Suporte"
+    },
+    {
+      "id": 5,
+      "name": "RH"
+    },
+    {
+      "id": 6,
+      "name": "Financeiro"
     }
   ]
 }
