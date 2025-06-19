@@ -13,12 +13,16 @@ import { flexRender } from "@tanstack/react-table";
 
 type Props<TData, TValue> = {
   variant?: "default" | "stripped"
+  theadClasses?:string
+  tableCellClasses?:string
 } & DataTableProps<TData, TValue>
 
 export function DataTable<TData, TValue>({
   columns,
   table,
-  variant
+  variant,
+  theadClasses,
+  tableCellClasses
 }: Props<TData, TValue>) {
 
   const renderClasses = (index:number) => {
@@ -29,7 +33,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <ComponentTable className="w-full data-table">
-      <TableHeader className="data-thead">
+      <TableHeader className={cn("data-thead",theadClasses)}>
         {table.getHeaderGroups().map((headerGroup) => (
           <TableRow key={headerGroup.id}>
             {headerGroup.headers.map((header) => (
@@ -49,9 +53,8 @@ export function DataTable<TData, TValue>({
         {table.getRowModel().rows?.length ? (
           table.getRowModel().rows.map((row,index) => (
             <TableRow
-              className={cn("data-table-row",renderClasses(index))}
+              className={cn("data-table-row",renderClasses(index), row.getIsSelected() && "bg-zinc-300", tableCellClasses)}
               key={row.id}
-              data-state={row.getIsSelected() && "selected"}
             >
               {row.getVisibleCells().map((cell) => (
                 <TableCell

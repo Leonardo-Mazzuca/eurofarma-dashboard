@@ -13,6 +13,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getUserInicials } from "@/utils/helpers";
 import { useChannels } from "@/hooks/use-channels";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "@/components/ui/button";
+import { Trash } from "lucide-react";
 
 
 const FeatureToggleTable = () => {
@@ -24,11 +26,26 @@ const FeatureToggleTable = () => {
     {
       id: "select",
       header: ({ table }) => (
-        <Checkbox
-          checked={table.getIsAllPageRowsSelected()}
-          onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-          aria-label="Select all"
-        />
+        <div className="flex items-center gap-2">
+          <Checkbox
+            checked={table.getIsAllPageRowsSelected()}
+            onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+            aria-label="Select all"
+            className="cursor-pointer"
+            data-slot="checkbox"
+            
+          />
+          {table.getSelectedRowModel().rows.length > 0 && (
+            <div className="flex items-center gap-2">
+              <span>
+                {table.getSelectedRowModel().rows.length} Selecionados
+              </span>
+              <Button className="w-[25px] h-[25px] rounded-sm" size={"icon"} variant={"destructive"}>
+                <Trash size={16}/>
+              </Button>
+            </div>
+          )}
+        </div>
       ),
       
       cell: ({ row }) => (
@@ -94,8 +111,8 @@ const FeatureToggleTable = () => {
   });
 
   return (
-    <div className="mt-10">
-      <DataTable columns={columns} table={table} />
+    <div className="mt-10 shadow-2xs rounded-lg xl:w-[1200px]">
+      <DataTable theadClasses="shadow-md" tableCellClasses="border-gray-100" columns={columns} table={table} />
     </div>
   )
 }
