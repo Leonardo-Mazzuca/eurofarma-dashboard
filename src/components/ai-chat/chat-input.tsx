@@ -1,0 +1,23 @@
+import { Input, type InputProps } from "@/components/ui/input";
+import { SendHorizontal } from "lucide-react";
+import { Button } from "../ui/button";
+
+type Props = {
+    onButtonClick: () => void
+} & InputProps
+const ChatInput = ({ onButtonClick,...rest }: Props) => {
+  return (
+    <Input
+      onKeyDown={(e) => e.key === "Enter" && onButtonClick()}
+      className="bg-gray-200 border-none h-[50px] rounded-sm mx-auto mt-auto w-full"
+      suffixIcon={
+        <Button  variant={"ghost"} onClick={onButtonClick}>
+          <SendHorizontal />
+        </Button>
+      }
+      {...rest}
+    />
+  );
+};
+
+export default ChatInput;

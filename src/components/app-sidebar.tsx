@@ -28,7 +28,7 @@ export function AppSidebar() {
     { title: "Traces", url: "/traces", icon: Search },
     { title: "Dados", url: "/data", icon: ChartColumnDecreasing },
     { title: "Permissões", url: "/feature-toggle", icon: ShieldCheck },
-    { title: "IA Chat", url: "/ia-chat", icon: Sparkles },
+    { title: "IA Chat", url: "/ai-chat", icon: Sparkles },
     { title: "Configurações", url: "/config", icon: Settings },
   ];
 
