@@ -1,9 +1,13 @@
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Button } from "../ui/button"
 import { ChevronDown } from "lucide-react"
+import { useNavigate } from "react-router-dom"
 
 
 const FeatureToggleFilter = () => {
+  
+  const navigate = useNavigate();
+
   return (
     <div className="flex items-center gap-6">
         <DropdownMenu>
@@ -22,7 +26,7 @@ const FeatureToggleFilter = () => {
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
-        <Button className="h-[40px] bg-blue-500 rounded-md">
+        <Button onClick={()=>navigate(`${window.location.pathname}/new`)} className="h-[40px] bg-blue-500 rounded-md">
             Adicionar colaborador
         </Button>
     </div>

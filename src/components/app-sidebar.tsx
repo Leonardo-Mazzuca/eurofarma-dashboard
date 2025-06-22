@@ -24,7 +24,7 @@ import { Button } from "./ui/button";
 
 export function AppSidebar() {
   const items = [
-    { title: "Dashboard", url: "/", icon: LayoutDashboard, active: true },
+    { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard, active: true },
     { title: "Traces", url: "/traces", icon: Search },
     { title: "Dados", url: "/data", icon: ChartColumnDecreasing },
     { title: "Permissões", url: "/feature-toggle", icon: ShieldCheck },
@@ -39,7 +39,7 @@ export function AppSidebar() {
     <div className="bg-white h-[35px] absolute rounded-md w-[5px] left-0" />
   );
 
-  const isActive = (url: string) => window.location.pathname === url;
+  const isActive = (url: string) => window.location.pathname.includes(url);
 
   const navigate = useNavigate();
 

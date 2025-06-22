@@ -4,6 +4,8 @@ import FeatureToggle from "@/pages/feature-toggle"
 import AiChat from "@/pages/ai-chat"
 import Config from "@/pages/config"
 import Data from "@/pages/data"
+import NewFeatureToggle from "./new-feature-toggle"
+
 
 
 export {
@@ -12,5 +14,6 @@ export {
     FeatureToggle,
     AiChat,
     Config,
-    Data
+    Data,
+    NewFeatureToggle
 }
