@@ -1,24 +1,32 @@
-import { AppSidebar } from "./app-sidebar"
-import { SidebarProvider, SidebarTrigger } from "./ui/sidebar"
 
+import { AppSidebar } from "./app-sidebar";
+import { SidebarProvider, SidebarTrigger } from "./ui/sidebar";
+import { useConfig } from "@/context/config-context";
+import { cn } from "@/lib/utils";
 
-
-const Layout = ({children}:{children: React.ReactNode}) => {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <SidebarProvider>
-        <main className="flex-1 h-screen">
-            <AppSidebar />
-              <section className="flex-1 h-screen">
-                <div className="xl:hidden fixed rounded-br-2xl bg-zinc-700 p-3">
-                  <SidebarTrigger />
-                </div>
-                <div className="flex-1 xl:ms-[250px]">
-                  {children}
-                </div>
-            </section>
-        </main>
-    </SidebarProvider>
-  )
-}
+      <SidebarProvider>{children}</SidebarProvider>
+  );
+};
 
-export default Layout
+const Layout = ({ children }: { children: React.ReactNode }) => {
+
+  const {isDarkMode} = useConfig();
+
+  return (
+    <RootLayout>
+      <main className={cn("flex-1 h-screen",(isDarkMode && "dark"))}>
+        <AppSidebar />
+        <section className="flex-1 h-screen">
+          <div className="xl:hidden fixed rounded-br-2xl bg-zinc-700 p-3">
+            <SidebarTrigger />
+          </div>
+          <div className="flex-1 xl:ms-[250px]">{children}</div>
+        </section>
+      </main>
+    </RootLayout>
+  );
+};
+
+export default Layout;
