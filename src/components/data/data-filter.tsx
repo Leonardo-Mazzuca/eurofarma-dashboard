@@ -16,9 +16,9 @@ const DataFilters = () => {
     <div className="flex items-center gap-2">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button className="font-medium text-gray-500" variant="outline">
+          <Button className="font-medium text-gray-500 dark:text-gray-200" variant="outline">
             Linha do tempo:{" "}
-            <span className="text-black font-bold">
+            <span className="text-black dark:text-gray-400 font-bold">
               {
                 dataLineTimeFilter.find((item) => item.value === lineTimeItem)
                   ?.label
@@ -41,9 +41,9 @@ const DataFilters = () => {
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button className="font-medium text-gray-500" variant="outline">
+          <Button className="font-medium text-gray-500 dark:text-gray-200" variant="outline">
             Topicos:{" "}
-            <span className="text-black font-bold">
+            <span className="text-black dark:text-gray-400 font-bold">
               {dataTopicFilters.find((item) => item.value === topicItem)?.label}
             </span>
           </Button>

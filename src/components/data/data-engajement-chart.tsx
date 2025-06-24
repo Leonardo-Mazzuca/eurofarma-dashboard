@@ -15,8 +15,12 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { useConfig } from "@/context/config-context";
 
 const DataEngajementChart = () => {
+
+  const {isDarkMode} = useConfig();
+
   const data = [
     { month: "JAN", value: 120, goal: 400 },
     { month: "FEB", value: 140, goal: 400 },
@@ -38,7 +42,7 @@ const DataEngajementChart = () => {
         title={
           <div>
             <div className="flex w-full items-center justify-between">
-              <h2 className="text-gray-500 text-sm font-medium">
+              <h2 className="text-gray-500 text-sm dark:text-gray-200 font-medium">
                 Engajamento mensal no app
               </h2>
 
@@ -63,9 +67,9 @@ const DataEngajementChart = () => {
           </div>
         }
         className="h-full px-0"
-        contentClasses="p-0 h-full"
+        contentClasses="p-0 flex-1 h-full"
       >
-        <ResponsiveContainer height={"100%"} width="100%">
+        <ResponsiveContainer height={170} width="100%">
           <BarChart
             width={400}
             height={300}
@@ -79,8 +83,8 @@ const DataEngajementChart = () => {
           >
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="80%" stopOpacity={0.9} stopColor="#1B59F8" />
-                <stop offset="20%" stopOpacity={0.4} stopColor="#1B59F8" />
+              <stop offset="80%" stopOpacity={0.9} stopColor="#1B59F8" />  
+              <stop offset="20%" stopOpacity={0.9} stopColor="#1B59F8" /> 
               </linearGradient>
             </defs>
             <XAxis
@@ -103,11 +107,11 @@ const DataEngajementChart = () => {
             <Tooltip />
 
             <Bar
-              radius={10}
+              radius={15}
               barSize={10}
               dataKey="value"
               fill="url(#colorUv)"
-              background={{ fill: "#F2F7FF" }}
+              background={{ fill: isDarkMode ? "#181818" : "#F2F7FF" }}
             />
           </BarChart>
         </ResponsiveContainer>

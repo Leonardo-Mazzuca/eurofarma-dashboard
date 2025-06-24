@@ -50,12 +50,14 @@ const DataProgressItems = () => {
   ];
 
   return (
-    <div>
-      <div className="flex lg:flex-row flex-col items-center gap-6">
+    <div className="flex gap-6 items-stretch min-w-full">
+      <div className="flex-1">
         <DataProgressItem
           items={firstRowItems}
           title={"Quizzes com menor índice de acerto"}
         />
+      </div>
+      <div className="flex-1">
         <DataProgressItem
           title="Quizzes com maior taxa de acertos ou conclusão"
           items={secondRowItems}

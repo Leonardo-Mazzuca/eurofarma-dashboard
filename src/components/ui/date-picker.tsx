@@ -29,13 +29,13 @@ export function DatePicker({enableTime = true,triggerClasses}: Props) {
             <Button
               variant="outline"
               id="date"
-              className={cn("w-42 justify-between dark:text-white font-normal",triggerClasses)}
+              className={cn("w-42 justify-between dark:border-none dark:text-white font-normal",triggerClasses)}
             >
               {date ? date.toLocaleDateString() : "Selecionar data"}
               <ChevronDownIcon />
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-auto overflow-hidden p-0" align="start">
+          <PopoverContent className="w-auto dark:bg-zinc-700 overflow-hidden p-0" align="start">
             <Calendar
               mode="single"
               selected={date}

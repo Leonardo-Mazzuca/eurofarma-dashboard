@@ -7,7 +7,7 @@ function Card({ className, variant="default", ...props }: CardProps) {
 
   const classNames = {
     default: "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",
-    shadow: "bg-card text-card-foreground flex flex-col gap-6 rounded-md border-none bg-white py-6 shadow-2xl",
+    shadow: "dark:bg-card text-card-foreground flex flex-col gap-6 rounded-md border-none bg-white py-6 shadow-2xl",
   }
 
   return (

@@ -15,7 +15,7 @@ const DataProgressItem = ({ items, title }: Props) => {
   return (
     <CardItemContainer
       className="w-full"
-      title={<h2 className="text-gray-500 text-sm font-medium">{title}</h2>}
+      title={<h2 className="text-gray-500 dark:text-gray-200 text-sm font-medium">{title}</h2>}
       contentClasses="w-full block"
     >
       <div className="flex flex-col gap-3">
@@ -32,7 +32,7 @@ const DataProgressItem = ({ items, title }: Props) => {
                 {item.title}
               </h2>
 
-              <div className="mt-1 h-2.5 rounded-full bg-gray-200 overflow-hidden">
+              <div className="mt-1 h-2.5 rounded-full bg-gray-200 dark:bg-zinc-700 overflow-hidden">
                 <div
                   className="h-full rounded-full transition-all"
                   style={{

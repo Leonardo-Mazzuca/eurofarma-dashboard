@@ -10,11 +10,11 @@ import { ChevronRight, Download } from "lucide-react";
 
 const Data = () => {
   return (
-    <section className="px-6 py-8">
+    <section className="px-6 dark:bg-zinc-800 py-8">
       <Header
         title="Dados"
         leftChildren={
-          <Button className="lg:me-[300px]" variant={"ghost"}>
+          <Button className="lg:me-[300px] dark:text-white" variant={"ghost"}>
             <Download />
             Download
           </Button>
@@ -25,26 +25,35 @@ const Data = () => {
         <DataFilters />
 
         <section className="flex gap-6 xl:flex-row flex-col mt-5">
-          <div className="flex w-full xl:w-[1100px] gap-6 flex-col">
-            <div className="flex xl:flex-row flex-col gap-5 items-stretch">
-              <DataCards />
-              <DataEngajementChart />
+          <div className="flex w-full gap-6 flex-col xl:w-[1100px]">
+            <div className="flex flex-col gap-6 w-full">
+              <div className="grid w-full gap-6 xl:grid-cols-4 items-stretch">
+                <div className="col-span-2">
+                  <DataCards />
+                </div>
+                <div className="col-span-2 h-full">
+                  <DataEngajementChart />
+                </div>
+              </div>
+              <DataProgressItems />
             </div>
-
-            <DataProgressItems />
-            <div className="flex xl:flex-row flex-col items-center gap-6 w-full">
-              <DataRankItem
-                title="% de acertos + engajamento por colaborador"
-                rankItems={rankMock}
-              />
-              <DataRankItem
-                title="% de acertos + engajamento por área"
-                rankItems={rankMock}
-              />
+            <div className="flex xl:flex-row flex-col items-stretch gap-6 w-full">
+              <div className="flex-1">
+                <DataRankItem
+                  title="% de acertos + engajamento por colaborador"
+                  rankItems={rankMock}
+                />
+              </div>
+              <div className="flex-1">
+                <DataRankItem
+                  title="% de acertos + engajamento por área"
+                  rankItems={rankMock}
+                />
+              </div>
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-5">
+          <div className="flex max-xl:w-full flex-col items-stretch gap-5">
             <DataRankItem
               title="Engajamento programas por colaborador"
               rankItems={rankMock}

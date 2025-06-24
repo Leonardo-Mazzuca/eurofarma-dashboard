@@ -112,7 +112,7 @@ const FeatureToggleTable = () => {
 
   return (
     <div className="mt-10 shadow-2xs rounded-lg xl:w-[1200px]">
-      <DataTable theadClasses="shadow-md" tableCellClasses="border-gray-100" columns={columns} table={table} />
+      <DataTable theadClasses="shadow-md" tableCellClasses="border-gray-100 dark:border-zinc-700" columns={columns} table={table} />
     </div>
   )
 }

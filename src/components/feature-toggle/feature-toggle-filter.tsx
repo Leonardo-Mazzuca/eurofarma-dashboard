@@ -11,9 +11,9 @@ const FeatureToggleFilter = () => {
   return (
     <div className="flex items-center gap-6">
         <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-                <Button className="border h-[45px] text-gray-500 border-gray-300" variant={"ghost"}>
-                    Filtrar por: <span className="font-bold text-black">Todos os permissionamentos</span>
+            <DropdownMenuTrigger className="dark:bg-zinc-700 dark:border-none" asChild>
+                <Button className="border h-[45px] text-gray-500 dark:text-gray-200 border-gray-300" variant={"ghost"}>
+                    Filtrar por: <span className="font-bold dark:text-gray-400 text-black">Todos os permissionamentos</span>
                     <ChevronDown />
                 </Button>
             </DropdownMenuTrigger>

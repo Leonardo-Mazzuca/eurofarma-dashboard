@@ -19,7 +19,7 @@ const DataRankItem = ({ wrapperClasses, rankItems, title }: Props) => {
   return (
     <CardItemContainer
       className={"w-full flex flex-col"}
-      title={<h2 className="text-gray-500 text-sm font-medium">{title}</h2>}
+      title={<h2 className="text-gray-500 dark:text-gray-200 text-sm font-medium">{title}</h2>}
       contentClasses="w-full"
     >
       <div className={cn("flex-1 h-[500px] overflow-y-auto scrollbar-hide",wrapperClasses)}>
@@ -33,10 +33,10 @@ const DataRankItem = ({ wrapperClasses, rankItems, title }: Props) => {
 
               <div className="flex items-center justify-between w-full">
                 <div>
-                  <h2 className="text-zinc-800 my-0 text-sm font-bold">
+                  <h2 className="text-zinc-800 dark:text-gray-400 my-0 text-sm font-bold">
                     {item.name}
                   </h2>
-                  <p className="text-gray-500 text-sm font-medium">
+                  <p className="text-gray-500 dark:text-gray-300 text-sm font-medium">
                     {item.description}
                   </p>
                 </div>

@@ -107,13 +107,13 @@ const DataCard = ({
   return (
     <Card
       variant="shadow"
-      className="w-full rounded-2xl flex flex-col h-[150px] xl:w-[200px] flex-1"
+      className="w-full rounded-2xl flex flex-col h-[150px]"
     >
       <CardContent className="flex flex-col justify-between h-full">
         <div>
             <p className="font-semibold text-sm text-zinc-500">{title}</p>
 
-            <h3 className="font-bold text-2xl text-zinc-900 flex items-baseline gap-1">
+            <h3 className="font-bold text-2xl text-zinc-900 dark:text-white flex items-baseline gap-1">
             {mainValue}
             {totalValue && (
                 <span className="text-gray-400 font-semibold text-base">

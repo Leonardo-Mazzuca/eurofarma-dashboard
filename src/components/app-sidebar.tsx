@@ -73,7 +73,7 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
 
-        <Button className="mt-auto flex font-normal cursor-pointer items-center gap-3 mx-5 bg-zinc-600 text-lg mb-10">
+        <Button className="mt-auto dark:text-white flex font-normal cursor-pointer items-center gap-3 mx-5 bg-zinc-600 text-lg mb-10">
           <LogOut />
           Logout
         </Button>
