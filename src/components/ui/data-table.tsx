@@ -53,11 +53,12 @@ export function DataTable<TData, TValue>({
         {table.getRowModel().rows?.length ? (
           table.getRowModel().rows.map((row,index) => (
             <TableRow
-              className={cn("data-table-row",renderClasses(index), row.getIsSelected() && "bg-zinc-300", tableCellClasses)}
+              className={cn("data-table-row dark:bg-zinc-800",renderClasses(index), row.getIsSelected() && "bg-zinc-300 dark:bg-zinc-700", tableCellClasses)}
               key={row.id}
             >
               {row.getVisibleCells().map((cell) => (
                 <TableCell
+                  className="dark:text-white"
                   data-label={
                     table
                       .getAllColumns()

@@ -16,7 +16,7 @@ const HomeHeader = () => {
   return (
     <div className="flex justify-between">
       <div className="max-lg:mt-10">
-        <h2 className="text-2xl text-zinc-600 font-semibold">Hoje</h2>
+        <h2 className="text-2xl text-zinc-600 dark:text-zinc-300 font-semibold">Hoje</h2>
         <p className="text-muted-foreground">
           {today.format("ddd, DD MMM, YYYY, hh.mm A")}
         </p>
@@ -33,13 +33,15 @@ const HomeHeader = () => {
 
 const HomeLeft = () => {
   return (
-    <div className="bg-neutral-100 max-lg:flex max-lg:flex-col py-8 px-6 lg:w-[500px]">
+    <div className="bg-neutral-100 dark:bg-zinc-700 max-lg:flex max-lg:flex-col py-8 px-6 lg:w-[500px]">
       <HomeHeader />
       <div className="lg:hidden max-lg:mt-5">
         <ProfileHeader />
       </div>
-      <Cards />
-      <DonutChart />
+      <div className="flex flex-col gap-3">
+        <Cards />
+        <DonutChart />
+      </div>
     </div>
   );
 };

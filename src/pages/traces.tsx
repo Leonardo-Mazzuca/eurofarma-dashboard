@@ -8,7 +8,7 @@ const Traces = () => {
   const { isLoading, traces } = useTraces();
 
   return (
-    <section className="flex-1 flex-col py-8 px-6 max-lg:flex-col flex">
+    <section className="flex-1 dark:bg-zinc-800 flex-col py-8 px-6 max-lg:flex-col flex">
       <SearchTraces />
 
       <TracesChart />

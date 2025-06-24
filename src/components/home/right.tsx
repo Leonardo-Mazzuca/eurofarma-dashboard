@@ -6,13 +6,15 @@ import ProfileHeader from "./profile-header"
 
 const HomeRight = () => {
   return (
-    <div className="w-full flex-col px-8 p-3 gap-3">
+    <div className="w-full flex-col px-8 p-3 gap-6">
       <div className="max-lg:hidden">
         <ProfileHeader />
       </div>
-      <DateFilter />
-      <ColaboratorsTable />
-      <LineChart />
+      <div className="flex flex-col gap-3">
+        <DateFilter />
+        <ColaboratorsTable />
+        <LineChart />
+      </div>
     </div>
   )
 }

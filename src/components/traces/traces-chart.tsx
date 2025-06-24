@@ -1,4 +1,5 @@
 import CardItemContainer from "@/components/ui/card-item-container";
+import { useConfig } from "@/context/config-context";
 import {
   BarChart,
   Bar,
@@ -10,6 +11,8 @@ import {
 } from "recharts";
 
 const TracesChart = () => {
+
+  const {isDarkMode} = useConfig();
   const data = Array.from({ length: 24 }, (_, i) => {
     const hour = `${String(i).padStart(2, "0")}:00`;
     return {
@@ -25,10 +28,10 @@ const TracesChart = () => {
       className="border border-gray-200 my-10 shadow-none"
       variant="default"
       title={<div>
-        <h2 className="font-semibold mb-2 text-zinc-600">
+        <h2 className="font-semibold mb-2 text-zinc-600 dark:text-zinc-300">
           Atividade
         </h2>
-        <div className="w-full h-[1px] bg-gray-200" />
+        <div className="w-full h-[1px] bg-gray-200 dark:bg-zinc-700" />
       </div>}
     >
       <ResponsiveContainer width="100%" height={200}>
@@ -66,11 +69,12 @@ const TracesChart = () => {
           <Tooltip />
 
           <Bar
-            radius={10}
+            radius={15}
             barSize={15}
             dataKey="pv"
             fill="url(#colorUv)"
-            background={{ fill: "#F2F7FF" }}
+            background={{ fill: isDarkMode ? "#181818" : "#F2F7FF" }}
+            
           />
         </BarChart>
       </ResponsiveContainer>

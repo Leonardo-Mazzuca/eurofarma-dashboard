@@ -17,7 +17,7 @@ const CardItemContainer = ({
   ...rest
 }: Props) => {
   return (
-    <Card {...rest} variant={variant}>
+    <Card {...rest} className="dark:bg-zinc-800" variant={variant}>
       <CardHeader>
         <h2 className="text-xl font-semibold">{title}</h2>
       </CardHeader>
