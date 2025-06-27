@@ -68,3 +68,22 @@ export const dataTopicFilters = [
     label: "Engajamento"
   }
 ]
+
+export const areas = [
+  {
+    value: "ti",
+    label: "TI"
+  },
+  {
+    value: "comercial",
+    label: "Comercial"
+  },
+  {
+    value: "financeiro",
+    label: "Financeiro"
+  },
+  {
+    value: "gerencial",
+    label: "Gerencial"
+  }
+]

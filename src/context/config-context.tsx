@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useEffect, useState } from "react"
 
 
 
@@ -17,10 +17,21 @@ const ConfigProvider = ({children}:{children:React.ReactNode}) => {
     const toggleMode = () => {
         if(isDarkMode){
             setIsDarkMode(false)
+            localStorage.setItem("isDarkMode", "false")
         } else {
             setIsDarkMode(true)
+            localStorage.setItem("isDarkMode", "true")
         }
     }
+    
+    useEffect(()=> {
+
+        const localDarkMode = JSON.parse(localStorage.getItem("isDarkMode") || "false");
+        if(localDarkMode) {
+            setIsDarkMode(Boolean(localDarkMode))
+        }
+        
+    },[])
 
     const value = {
         isDarkMode,
