@@ -1,14 +1,18 @@
 import { Button } from "@/components/ui/button"
+import clsx from "clsx"
 
 
 
 
 
-const UserButton = () => {
+const UserButton = ({className}:{className?:string}) => {
+
+  
   return (
     <Button
       size="icon"
-      className="rounded-full h-18 w-18 p-0 cursor-pointer hover:opacity-50 overflow-hidden"
+      className={clsx("rounded-full h-18 w-18 p-0 cursor-pointer hover:opacity-50 overflow-hidden", className)}
+      
     >
       <img
         src="https://github.com/Leonardo-Mazzuca.png"

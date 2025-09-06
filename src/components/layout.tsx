@@ -1,9 +1,9 @@
 
+
 import { AppSidebar } from "./app-sidebar";
 import { SidebarProvider, SidebarTrigger } from "./ui/sidebar";
 import { useConfig } from "@/context/config-context";
 import { cn } from "@/lib/utils";
-
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
       <SidebarProvider>{children}</SidebarProvider>
