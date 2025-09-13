@@ -34,6 +34,31 @@ declare global {
             values: number[]
         }
     }
+
+    type DataPointsItem = {
+        id: number,
+        user_id: number,
+        points: number
+        username: string,
+        status: 'online' | 'offline',
+    }
+
+    type PrizeProduct = { 
+        id: number,
+        name: string,
+        description: string,
+        image: string,
+        ordereds: number
+        avaliable: boolean
+        quantity: number
+    } 
+
+    type Order = {
+        id: number,
+        user_id: number,
+        status: 'delivered' | 'ordered' | 'waiting'
+    }
+
 }
 
 export {}

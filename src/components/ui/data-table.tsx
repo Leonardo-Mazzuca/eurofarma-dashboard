@@ -59,6 +59,9 @@ export function DataTable<TData, TValue>({
               {row.getVisibleCells().map((cell) => (
                 <TableCell
                   className="dark:text-white"
+                  style={{
+                    width: cell.column.getSize()
+                  }}
                   data-label={
                     table
                       .getAllColumns()

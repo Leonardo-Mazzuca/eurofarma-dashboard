@@ -7,10 +7,20 @@ export const useColaborators = () => {
 
 
     const [colaborators, setColaborators] = useState<User[]>([]);
+    const [rankPointsItems, setRankPointsItems] = useState<DataPointsItem[]>([]);
 
     const fetchUsers = async () => {
         try {
             const res = await api.get('/users');
+            return res.data
+        } catch (e:unknown) {
+            console.log(e);
+        }
+    }
+
+    const fetchRankItems = async () => {
+        try {
+            const res = await api.get('/data-points-items');
             return res.data
         } catch (e:unknown) {
             console.log(e);
@@ -22,13 +32,24 @@ export const useColaborators = () => {
         queryKey: ['users']
     })
 
+    const {data: dataPointsItems} = useQuery({
+        queryFn: fetchRankItems,
+        queryKey: ['data-points-items']
+    })
+
     useEffect(()=> {
         if(data) setColaborators(data);
     },[data])
 
+    useEffect(()=> {
+        if(dataPointsItems) setRankPointsItems(dataPointsItems);
+    },[dataPointsItems])
+
     return {
         colaborators,
-        isLoading
+        isLoading,
+        rankPointsItems,
+        dataPointsItems
     }
 
 

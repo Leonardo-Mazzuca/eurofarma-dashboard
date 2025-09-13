@@ -1,4 +1,5 @@
 import DataCards from "@/components/data/data-cards";
+import DataCollaboratorsPointRank from "@/components/data/data-collaborator-points-rank";
 import DataEngajementChart from "@/components/data/data-engajement-chart";
 import DataFilters from "@/components/data/data-filter";
 import DataProgressItems from "@/components/data/data-progress-items";
@@ -39,15 +40,13 @@ const Data = () => {
             </div>
             <div className="flex xl:flex-row flex-col items-stretch gap-6 w-full">
               <div className="flex-1">
-                <DataRankItem
-                  title="% de acertos + engajamento por colaborador"
-                  rankItems={rankMock}
-                />
+                <DataCollaboratorsPointRank />
               </div>
               <div className="flex-1">
                 <DataRankItem
-                  title="% de acertos + engajamento por área"
+                  title="% de acertos nos quizzes + engajamento por colaborador"
                   rankItems={rankMock}
+                  wrapperClasses="h-[400px]"
                 />
               </div>
             </div>

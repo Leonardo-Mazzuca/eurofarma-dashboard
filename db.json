@@ -137,7 +137,14 @@
       "title": "Participação em programas",
       "description": "64%",
       "chartData": {
-        "values": [30, 45, 50, 48, 60, 64]
+        "values": [
+          30,
+          45,
+          50,
+          48,
+          60,
+          64
+        ]
       }
     },
     {
@@ -145,7 +152,14 @@
       "title": "Engajamento de usuários",
       "description": "86%",
       "chartData": {
-        "values": [60, 62, 70, 74, 80, 86]
+        "values": [
+          60,
+          62,
+          70,
+          74,
+          80,
+          86
+        ]
       }
     },
     {
@@ -153,7 +167,14 @@
       "title": "Conclusão de treinamentos",
       "description": "+34%",
       "chartData": {
-        "values": [10, 15, 20, 25, 30, 34]
+        "values": [
+          10,
+          15,
+          20,
+          25,
+          30,
+          34
+        ]
       }
     }
   ],
@@ -181,6 +202,302 @@
     {
       "id": 6,
       "name": "Financeiro"
+    }
+  ],
+  "data-points-items": [
+    {
+      "id": 1,
+      "user_id": 101,
+      "points": 250,
+      "username": "leonardo",
+      "status": "online"
+    },
+    {
+      "id": 2,
+      "user_id": 102,
+      "points": 180,
+      "username": "maria",
+      "status": "offline"
+    },
+    {
+      "id": 3,
+      "user_id": 103,
+      "points": 320,
+      "username": "joao",
+      "status": "online"
+    },
+    {
+      "id": 4,
+      "user_id": 104,
+      "points": 95,
+      "username": "carla",
+      "status": "offline"
+    },
+    {
+      "id": 5,
+      "user_id": 105,
+      "points": 410,
+      "username": "bruno",
+      "status": "online"
+    },
+    {
+      "id": 6,
+      "user_id": 106,
+      "points": 275,
+      "username": "ana",
+      "status": "online"
+    },
+    {
+      "id": 7,
+      "user_id": 107,
+      "points": 150,
+      "username": "ricardo",
+      "status": "offline"
+    },
+    {
+      "id": 8,
+      "user_id": 108,
+      "points": 365,
+      "username": "fernanda",
+      "status": "online"
+    },
+    {
+      "id": 9,
+      "user_id": 109,
+      "points": 210,
+      "username": "thiago",
+      "status": "offline"
+    },
+    {
+      "id": 10,
+      "user_id": 110,
+      "points": 480,
+      "username": "camila",
+      "status": "online"
+    },
+    {
+      "id": 11,
+      "user_id": 111,
+      "points": 305,
+      "username": "rodrigo",
+      "status": "online"
+    },
+    {
+      "id": 12,
+      "user_id": 112,
+      "points": 125,
+      "username": "patricia",
+      "status": "offline"
+    },
+    {
+      "id": 13,
+      "user_id": 113,
+      "points": 390,
+      "username": "gustavo",
+      "status": "online"
+    },
+    {
+      "id": 14,
+      "user_id": 114,
+      "points": 220,
+      "username": "isabela",
+      "status": "offline"
+    },
+    {
+      "id": 15,
+      "user_id": 115,
+      "points": 345,
+      "username": "felipe",
+      "status": "online"
+    }
+  ],
+  "prizes": [
+    {
+      "id": 1,
+      "name": "Copo Térmico",
+      "description": "Copo térmico de inox, mantém a temperatura por até 6h.",
+      "image": "/images/prizes/copo-termico.png",
+      "ordereds": 12,
+      "avaliable": true,
+      "quantity": 25
+    },
+    {
+      "id": 2,
+      "name": "Mochila Executiva",
+      "description": "Mochila com compartimento para notebook de até 15”.",
+      "image": "/images/prizes/mochila-executiva.png",
+      "ordereds": 7,
+      "avaliable": true,
+      "quantity": 12
+    },
+    {
+      "id": 3,
+      "name": "Fone Bluetooth",
+      "description": "Fone de ouvido sem fio com microfone embutido.",
+      "image": "/images/prizes/fone-bluetooth.png",
+      "ordereds": 25,
+      "avaliable": false,
+      "quantity": 0
+    },
+    {
+      "id": 4,
+      "name": "Power Bank 10.000mAh",
+      "description": "Carregador portátil com duas entradas USB.",
+      "image": "/images/prizes/powerbank.png",
+      "ordereds": 15,
+      "avaliable": true,
+      "quantity": 30
+    },
+    {
+      "id": 5,
+      "name": "Kit Canetas Luxo",
+      "description": "Conjunto de 3 canetas em estojo personalizado.",
+      "image": "/images/prizes/kit-canetas.png",
+      "ordereds": 8,
+      "avaliable": true,
+      "quantity": 18
+    },
+    {
+      "id": 6,
+      "name": "Caixa de Som Portátil",
+      "description": "Caixa de som Bluetooth com 12h de bateria.",
+      "image": "/images/prizes/caixa-som.png",
+      "ordereds": 3,
+      "avaliable": true,
+      "quantity": 10
+    },
+    {
+      "id": 7,
+      "name": "Agenda 2025",
+      "description": "Agenda executiva capa dura personalizada.",
+      "image": "/images/prizes/agenda.png",
+      "ordereds": 20,
+      "avaliable": true,
+      "quantity": 50
+    },
+    {
+      "id": 8,
+      "name": "Smartwatch",
+      "description": "Relógio inteligente com monitoramento de saúde.",
+      "image": "/images/prizes/smartwatch.png",
+      "ordereds": 9,
+      "avaliable": true,
+      "quantity": 5
+    },
+    {
+      "id": 9,
+      "name": "Caneca Personalizada",
+      "description": "Caneca de porcelana com logo da empresa.",
+      "image": "/images/prizes/caneca.png",
+      "ordereds": 14,
+      "avaliable": true,
+      "quantity": 40
+    },
+    {
+      "id": 10,
+      "name": "Suporte para Celular",
+      "description": "Suporte ajustável para mesa com base antiderrapante.",
+      "image": "/images/prizes/suporte-celular.png",
+      "ordereds": 2,
+      "avaliable": true,
+      "quantity": 60
+    },
+    {
+      "id": 11,
+      "name": "Ecobag",
+      "description": "Sacola ecológica de algodão com estampa exclusiva.",
+      "image": "/images/prizes/ecobag.png",
+      "ordereds": 5,
+      "avaliable": true,
+      "quantity": 100
+    },
+    {
+      "id": 12,
+      "name": "Garrafa Squeeze",
+      "description": "Garrafa plástica de 750ml com tampa flip.",
+      "image": "/images/prizes/squeeze.png",
+      "ordereds": 30,
+      "avaliable": true,
+      "quantity": 75
+    },
+    {
+      "id": 13,
+      "name": "Mouse Sem Fio",
+      "description": "Mouse ergonômico sem fio com ajuste de DPI.",
+      "image": "/images/prizes/mouse.png",
+      "ordereds": 11,
+      "avaliable": true,
+      "quantity": 22
+    },
+    {
+      "id": 14,
+      "name": "Teclado Mecânico",
+      "description": "Teclado com iluminação LED e switches azuis.",
+      "image": "/images/prizes/teclado.png",
+      "ordereds": 4,
+      "avaliable": false,
+      "quantity": 0
+    },
+    {
+      "id": 15,
+      "name": "Carregador Sem Fio",
+      "description": "Base de carregamento rápido sem fio para smartphones.",
+      "image": "/images/prizes/carregador-wireless.png",
+      "ordereds": 6,
+      "avaliable": true,
+      "quantity": 28
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "status": "delivered"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "status": "ordered"
+    },
+    {
+      "id": 3,
+      "user_id": 3,
+      "status": "waiting"
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "status": "ordered"
+    },
+    {
+      "id": 5,
+      "user_id": 2,
+      "status": "delivered"
+    },
+    {
+      "id": 6,
+      "user_id": 3,
+      "status": "ordered"
+    },
+    {
+      "id": 7,
+      "user_id": 1,
+      "status": "waiting"
+    },
+    {
+      "id": 8,
+      "user_id": 2,
+      "status": "waiting"
+    },
+    {
+      "id": 9,
+      "user_id": 3,
+      "status": "delivered"
+    },
+    {
+      "id": 10,
+      "user_id": 1,
+      "status": "delivered"
     }
   ]
 }

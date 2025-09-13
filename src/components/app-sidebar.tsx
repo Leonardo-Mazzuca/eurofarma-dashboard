@@ -1,5 +1,6 @@
 import {
   ChartColumnDecreasing,
+  Gift,
   LayoutDashboard,
   LogOut,
   Search,
@@ -27,6 +28,7 @@ export function AppSidebar() {
     { title: "Dashboard", url: "/", icon: LayoutDashboard, active: true },
     { title: "Traces", url: "/traces", icon: Search },
     { title: "Dados", url: "/data", icon: ChartColumnDecreasing },
+    { title: "Prêmios", url: "/prizes", icon: Gift },
     { title: "Permissões", url: "/feature-toggle", icon: ShieldCheck },
     { title: "IA Chat", url: "/ai-chat", icon: Sparkles },
     { title: "Configurações", url: "/config", icon: Settings },
