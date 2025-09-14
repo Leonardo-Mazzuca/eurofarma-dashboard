@@ -56,7 +56,7 @@ declare global {
     type Order = {
         id: number,
         user_id: number,
-        status: 'delivered' | 'ordered' | 'waiting'
+        status: 'delivered' | 'ordered' | 'waiting' | 'reversed'
     }
 
 }

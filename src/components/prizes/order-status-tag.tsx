@@ -1,7 +1,7 @@
 const OrderStatusTag = ({
   status,
 }: {
-  status: "delivered" | "ordered" | "waiting";
+  status: "delivered" | "ordered" | "waiting" | 'reversed';
 }) => {
   const renderText = () => {
     switch (status) {
@@ -11,6 +11,8 @@ const OrderStatusTag = ({
         return "Disp. Retirada";
       case "waiting":
         return "Aguardando";
+      case "reversed":
+        return "Estornado";
     }
   };
 
@@ -22,6 +24,8 @@ const OrderStatusTag = ({
         return "#1B59F8";
       case "waiting":
         return "red";
+      case "reversed":
+        return "purple";
     }
   };
 

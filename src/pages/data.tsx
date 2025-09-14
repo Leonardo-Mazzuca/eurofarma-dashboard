@@ -10,6 +10,7 @@ import rankMock from "@/utils/mock";
 import { ChevronRight, Download } from "lucide-react";
 
 const Data = () => {
+  
   return (
     <section className="px-6 dark:bg-zinc-800 py-8">
       <Header
