@@ -64,7 +64,7 @@ const PrizesOrdersTable = () => {
         <DetailDialog
           open={openDetailsModal}
           setOpen={setOpenDetailsModal}
-          status={orders[0].status}
+          status={"delivered"}
         />
     </CardItemContainer>
   );

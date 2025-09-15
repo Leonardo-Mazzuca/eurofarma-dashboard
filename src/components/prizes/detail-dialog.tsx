@@ -37,33 +37,10 @@ const DetailDialog = ({ status, open, setOpen }: Props) => {
       <DialogContent className="w-full max-w-[95vw] md:max-w-[1000px]">
         <DialogHeader>
           <DialogTitle>Detalhes</DialogTitle>
-          <div className="flex items-center gap-3">
-            <div className="flex-1 flex flex-col h-full">
-              <Card className="mb-auto py-3">
-                <div className="px-3">
-                  <h2>Colaborador a receber: Jesse thomas</h2>
-                  <p className="text-gray-500 font-medium text-md">área: TI</p>
-                  <p className="text-gray-500 font-medium text-md">
-                    Unidade: 1
-                  </p>
-                </div>
-              </Card>
-              <div>
-                <div className="flex items-center w-full justify-between gap-3">
-                  <h2 className="text-gray-500 font-semibold">
-                    Total do pedido:
-                  </h2>
-                  <p className="font-semibold">127 pontos</p>
-                </div>
-                <div className="flex items-center gap-3 justify-between">
-                  <h2 className="text-gray-500 font-semibold">Status:</h2>
-                  <OrderStatusTag status={status} />
-                </div>
-              </div>
-            </div>
+          <div className="flex items-center w-full gap-3">
             <div className="flex-1 gap-3 flex flex-col">
               {products.map((product) => (
-                <Card key={product.id} className="py-0">
+                <Card key={product.id} className="py-0 flex-1">
                   <div className="flex gap-3">
                     <img
                       src={product.image}
@@ -84,6 +61,37 @@ const DetailDialog = ({ status, open, setOpen }: Props) => {
                   </div>
                 </Card>
               ))}
+            </div>
+            <div
+              className="mx-2 h-full w-[3px] bg-gray-200 rounded-2xl"
+            />
+            <div className="flex-1 flex-col flex h-full">
+              <Card className="mb-auto py-3">
+                <div className="px-3">
+                  <h2 className="font-semibold">
+                    <span className="text-gray-500 font-semibold">
+                      Colaborador a receber:
+                    </span>{" "}
+                    Jesse thomas
+                  </h2>
+                  <p className="text-gray-500 font-medium text-md">área: TI</p>
+                  <p className="text-gray-500 font-medium text-md">
+                    Unidade: 1
+                  </p>
+                </div>
+              </Card>
+              <Card className="p-3">
+                <div className="flex items-center mt-auto w-full justify-between gap-3">
+                  <h2 className="text-gray-500 font-semibold">
+                    Total do pedido:
+                  </h2>
+                  <p className="font-semibold">127 pontos</p>
+                </div>
+                <div className="flex items-center gap-3 justify-between">
+                  <h2 className="text-gray-500 font-semibold">Status:</h2>
+                  <OrderStatusTag status={status} />
+                </div>
+              </Card>
             </div>
           </div>
         </DialogHeader>
