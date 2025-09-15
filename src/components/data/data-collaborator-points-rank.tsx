@@ -4,6 +4,7 @@ import SorterButton from "../ui/sorter-button";
 import StatusTag from "../ui/status-tag";
 import { DataTable } from "../ui/data-table";
 import { useColaborators } from "@/hooks/use-colaborators";
+import { Button } from "../ui/button";
 
 const DataCollaboratorsPointRank = () => {
 
@@ -57,10 +58,13 @@ const DataCollaboratorsPointRank = () => {
             </h2>
         </div>
       }
-      contentClasses="w-full h-[400px]"
+      contentClasses="w-full flex-1 flex flex-col gap-2 h-[400px]"
     >
 
         <DataTable columns={columns} table={table} />
+        <Button variant={"ghost"} className="text-blue-500 me-auto">
+          Ver todos os colaboradores
+        </Button>
     </CardItemContainer>
   );
 };

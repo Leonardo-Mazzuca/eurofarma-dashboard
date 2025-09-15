@@ -59,6 +59,8 @@ declare global {
         status: 'delivered' | 'ordered' | 'waiting' | 'reversed'
     }
 
+    type OrderStatus = "delivered" | "ordered" | "waiting" | 'reversed'
+
 }
 
 export {}

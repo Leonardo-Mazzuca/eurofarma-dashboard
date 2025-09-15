@@ -1,7 +1,7 @@
 const OrderStatusTag = ({
   status,
 }: {
-  status: "delivered" | "ordered" | "waiting" | 'reversed';
+  status: OrderStatus;
 }) => {
   const renderText = () => {
     switch (status) {
@@ -40,7 +40,7 @@ const OrderStatusTag = ({
 
   return (
     <div className="flex items-center gap-2">
-      <p className="text-zinc-700 font-semibold">{renderText()}</p>
+      <p className="text-zinc-700 dark:text-gray-400 font-semibold">{renderText()}</p>
       <span
         style={{
           ...circleStyle,

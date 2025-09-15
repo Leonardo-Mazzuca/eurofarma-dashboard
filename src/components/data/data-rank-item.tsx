@@ -3,6 +3,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { getUserInicials } from "@/utils/helpers";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "../ui/button";
 
 type Props = {
   title: string;
@@ -53,6 +54,9 @@ const DataRankItem = ({ wrapperClasses, rankItems, title }: Props) => {
             </div>
           ))}
         </div>
+        <Button className="text-blue-500" variant={"ghost"}>
+          Ver todos os colaboradores
+        </Button>
       </div>
     </CardItemContainer>
   );

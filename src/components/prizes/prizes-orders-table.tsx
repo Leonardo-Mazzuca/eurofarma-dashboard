@@ -44,10 +44,10 @@ const PrizesOrdersTable = () => {
                   <AvatarImage src={user?.image} />
                 </Avatar>
                 <div>
-                  <p className="font-semibold text-zinc-700">
+                  <p className="font-semibold text-zinc-700 dark:text-gray-100">
                     {user?.fullName}
                   </p>
-                  <p className="font-normal text-zinc-500">
+                  <p className="font-normal text-zinc-500 dark:text-gray-300">
                     {user?.points} Pontos
                   </p>
                 </div>
@@ -64,6 +64,7 @@ const PrizesOrdersTable = () => {
         <DetailDialog
           open={openDetailsModal}
           setOpen={setOpenDetailsModal}
+          status={orders[0].status}
         />
     </CardItemContainer>
   );
