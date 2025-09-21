@@ -1,5 +1,3 @@
-> © 2025 Tech's Version — Este projeto é de uso exclusivo do grupo Tech's Version.  
-> Nenhuma cópia, modificação ou distribuição é permitida sem autorização prévia dos membros.
 
 ## 🇧🇷 PT-BR
 
@@ -135,4 +133,7 @@ npm run dev
 🔎 Después de eso, podrás visualizar el panel en funcionamiento.
 
 <img width="1889" height="929" alt="image" src="https://github.com/user-attachments/assets/8ee00054-38c1-490b-b82c-58cd05f0160f" />
+
+> © 2025 Tech's Version — Este projeto é de uso exclusivo do grupo Tech's Version.  
+> Nenhuma cópia, modificação ou distribuição é permitida sem autorização prévia dos membros.
 
